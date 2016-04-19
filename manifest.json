@@ -2,11 +2,11 @@
 
   "description": "Adds browser action icon to toolbar to choose user agent string from popup menu. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples#user-agent-rewriter",
   "manifest_version": 2,
-  "name": "user-agent-rewriter",
+  "name": "C00kie Monster",
   "version": "1.0",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/user-agent-rewriter",
+  "homepage_url": "https://github.com/dylanmm/c00kie-monster",
   "icons": {
-    "48": "icons/person-48.png"
+    "48": "icons/cookie_icon.png"
   },
 
   "applications": {
@@ -17,7 +17,7 @@
   },
 
   "permissions": [
-    "webRequest", "webRequestBlocking", "http://useragentstring.com/*","localhost","tabs","<all_urls>","cookies" 
+    "webRequest", "webRequestBlocking","localhost","tabs","<all_urls>","cookies" 
   ],
   
  /* "background": {

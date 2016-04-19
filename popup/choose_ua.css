@@ -11,11 +11,16 @@ body {
 #title {
   text-align: center;
 }
-.cookie {
-  border:2px solid #E7E7E7;
+#github {
+  font-size:.8em;
+  text-decoration: none;
+  vertical-align: middle;
 }
-.cookie .cooke_title {
-  font-size:1.6em;
+.cookie {
+}
+.cookie h2 {
+  font-size:1.4em;
+  border-bottom:2px solid #E7E7E7;
 }
 .cookie .title_domain {
   font-color:grey;

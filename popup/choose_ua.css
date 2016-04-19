@@ -1,0 +1,25 @@
+html {
+}
+
+body {
+  background: #EEEEEE;
+  min-height:400px;
+  width:500px;
+  overflow-x: hidden;
+}
+
+#title {
+  text-align: center;
+}
+.cookie {
+  border:2px solid #E7E7E7;
+}
+.cookie .cooke_title {
+  font-size:1.6em;
+}
+.cookie .title_domain {
+  font-color:grey;
+}
+.cookie .title_name {
+  font-weight:bold;
+}

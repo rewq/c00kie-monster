@@ -13,7 +13,7 @@ h3 {
   text-align:left;
 }
 
-#no_cookies h3 {
+h3#no_cookies {
   text-align:center;
   margin-top: 50px;
   color: grey;

@@ -1,0 +1,60 @@
+html {
+}
+
+body {
+  background: #EEEEEE;
+  min-height:400px;
+  width:500px;
+  overflow-x: hidden;
+}
+
+#title {
+  text-align: center;
+}
+#github {
+  text-align: center;
+}
+#github {
+  font-size:.8em;
+  text-decoration: none;
+  vertical-align: middle;
+}
+.cookie {
+}
+.cookie label {
+  display: block;
+}
+.sm-top-margin {
+  margin-top:.4em;
+}
+.cookie input[type="text"] {
+  display: block;
+  width:100%;
+}
+.cookie input[type="submit"] {
+  width:100%;
+  padding:.7em;
+}
+.cookie h2 {
+  font-size:1.4em;
+  margin-bottom: 0.4em;
+  border-bottom:2px solid #E7E7E7;
+}
+.cookie .title_domain {
+  font-color:grey;
+}
+.cookie .title_name {
+  font-weight:bold;
+}
+
+.check_boxs {
+  display:flex;
+  margin:1em;
+  width:100%;
+}
+.cookie .check_box {
+  width: 25%;
+  display: inline-block;
+  float: left;
+  text-align: center;
+}

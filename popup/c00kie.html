@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="c00kie-style.css"/>
+    <link rel="stylesheet" href="jquery.ui.css">
+    <script src="jquery.js"></script>  
+    <script src="jquery.ui.js"></script>
+    <script src="c00kie-script.js"></script>
+  </head>
+
+<body>
+
+
+<div id="container">
+<h1 id="title">C00kie Monster</h1>
+  <h3 id="github"><a target="blank" href="https://github.com/dylanmm/c00kie-monster">github source</a></h3> <!-- a target is nessecary here because you are in the context of the popup --> 
+  <center>
+  <div id="cookies">
+  </div>
+  </center>
+</div>
+</body>
+
+</html>
+<script type="text/template" id="cookie_template">
+
+  <h3 name="name">{{DOMAINNAME}} | <b>{{NAME}}</b></h3>
+  <div class="cookie container"><p>
+  <form id="{{ID}}" class="cookie_form">
+  <label class="sm-top-margin">Value</label>
+  <input type="text" name="value" value="{{VALUE}}">
+  <label class="sm-top-margin">Domain</label>
+  <input type="text" name="domain" value="{{DOMAIN}}">
+  <label class="sm-top-margin">Path</label>
+  <input type="text" name="path" value="{{PATH}}">
+  <label class="sm-top-margin">Expire</label>
+  <input type="text" name="expire" value="{{EXPIRE}}">
+
+  <div class="check_boxs">
+  <div class="check_box">
+  <label>Host Only</label>
+  <input type="checkbox" name="hostOnly" {{HOSTONLY}}/>
+  </div>
+
+  <div class="check_box">
+  <label>Secure</label>
+  <input type="checkbox" name="secure" {{SECURE}}/>
+  </div>
+
+  <div class="check_box">
+  <label>Http Only</label>
+  <input type="checkbox" name="httpOnly" {{HTTPONLY}}/>
+  </div>
+
+  <div class="check_box">
+  <label>Session</label>
+  <input type="checkbox" name="session" {{SESSION}}/>
+  </div>
+  </div>
+
+  <input type="submit" class="btn btn-primary btn-lg btn-block" value="APPLY">
+  </form>
+  </p></div>
+</script>

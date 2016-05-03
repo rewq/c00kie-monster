@@ -4,28 +4,29 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="c00kie-style.css"/>
-    <link rel="stylesheet" href="jquery.ui.css">
+    <link rel="stylesheet" href="jquery-ui.css">
     <script src="jquery.js"></script>  
     <script src="jquery.ui.js"></script>
     <script src="c00kie-script.js"></script>
   </head>
 
 <body>
-
-
-<div id="container">
-<h1 id="title">C00kie Monster</h1>
-  <h3 id="github"><a target="blank" href="https://github.com/dylanmm/c00kie-monster">github source</a></h3> <!-- a target is nessecary here because you are in the context of the popup --> 
-  <center>
-  <div id="cookies">
+  <div id="container">
+  <h1 id="title">C00kie Monster</h1>
+    <h3 id="github"><a target="blank" href="https://github.com/dylanmm/c00kie-monster">github source</a></h3> 
+    <!-- ^^ a target is nessecary here because you are in the context of the popup --> 
+    <center>
+      <div id="cookies">
+      <!-- Where the template gets duplicated -->
+      </div>
+    </center>
   </div>
-  </center>
-</div>
 </body>
 
 </html>
-<script type="text/template" id="cookie_template">
 
+<script type="text/template" id="cookie_template">
+  <!-- COOKIE TEMPLATE --> 
   <h3 name="name">{{DOMAINNAME}} | <b>{{NAME}}</b></h3>
   <div class="cookie container"><p>
   <form id="{{ID}}" class="cookie_form">
@@ -63,4 +64,9 @@
   <input type="submit" class="btn btn-primary btn-lg btn-block" value="APPLY">
   </form>
   </p></div>
+</script>
+
+<script type="text/template" id="no_cookies">
+  <!-- COOKIE TEMPLATE --> 
+  <h1 id="no_cookies">No Cookies to Display.</h1>
 </script>

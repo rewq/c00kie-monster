@@ -23,22 +23,30 @@ $( document ).ready(function() { // Document Ready
 		if (tabs[0]) {
 			currentTab = tabs[0];
 			chrome.cookies.getAll({"url":currentTab.url},function(cks){
-				c00kies = cks;
-				for (var i = 0; i <= cks.length-1; i++) {
-					var template = $("#cookie_template").html();
-					template = template.replace("{{ID}}",i);
-					template = template.replace("{{DOMAINNAME}}",cks[i].domain);
-					template = template.replace("{{NAME}}",cks[i].name);
-					template = template.replace("{{VALUE}}",cks[i].value);
-					template = template.replace("{{DOMAIN}}",cks[i].domain);
-					template = template.replace("{{PATH}}",cks[i].path);
-					template = template.replace("{{EXPIRE}}",cks[i].expirationDate);
-					template = template.replace("{{SECURE}}",(cks[i].secure ? "checked" : " "));
-					template = template.replace("{{SESSION}}",(cks[i].session ? "checked" : " "));
-					template = template.replace("{{HTTPONLY}}",(cks[i].httpOnly ? "checked" : " "));
-					template = template.replace("{{HOSTONLY}}",(cks[i].hostOnly ? "checked" : " "));
-					$("#cookies").append(template).accordion("refresh");
-				}	
+				if (cks.length > 0) {
+					// Display Cookies
+					c00kies = cks;
+					for (var i = 0; i <= cks.length-1; i++) {
+						var template = $("#cookie_template").html();
+						template = template.replace("{{ID}}",i);
+						template = template.replace("{{DOMAINNAME}}",cks[i].domain);
+						template = template.replace("{{NAME}}",cks[i].name);
+						template = template.replace("{{VALUE}}",cks[i].value);
+						template = template.replace("{{DOMAIN}}",cks[i].domain);
+						template = template.replace("{{PATH}}",cks[i].path);
+						template = template.replace("{{EXPIRE}}",cks[i].expirationDate);
+						template = template.replace("{{SECURE}}",(cks[i].secure ? "checked" : " "));
+						template = template.replace("{{SESSION}}",(cks[i].session ? "checked" : " "));
+						template = template.replace("{{HTTPONLY}}",(cks[i].httpOnly ? "checked" : " "));
+						template = template.replace("{{HOSTONLY}}",(cks[i].hostOnly ? "checked" : " "));
+						$("#cookies").append(template);
+					}
+				} else {
+					// No cookies
+					var template = $("#no_cookies").html();
+					$("#cookies").append(template);
+				}
+	
 			});
 		}
 	}); 

@@ -1,11 +1,22 @@
 html {
+
 }
 
 body {
   background: #EEEEEE;
-  min-height:400px;
+  min-height:240px;
   width:500px;
   overflow-x: hidden;
+}
+
+h3 {
+  text-align:left;
+}
+
+#no_cookies h3 {
+  text-align:center;
+  margin-top: 50px;
+  color: grey;
 }
 
 #title {

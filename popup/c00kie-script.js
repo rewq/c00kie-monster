@@ -31,6 +31,7 @@ $( document ).ready(function() { // Document Ready
 						template = template.replace("{{ID}}",i);
 						template = template.replace("{{DOMAINNAME}}",cks[i].domain);
 						template = template.replace("{{NAME}}",cks[i].name);
+						template = template.replace("{{NAMEHIDDEN}}",cks[i].name);
 						template = template.replace("{{VALUE}}",cks[i].value);
 						template = template.replace("{{DOMAIN}}",cks[i].domain);
 						template = template.replace("{{PATH}}",cks[i].path);
@@ -39,7 +40,7 @@ $( document ).ready(function() { // Document Ready
 						template = template.replace("{{SESSION}}",(cks[i].session ? "checked" : " "));
 						template = template.replace("{{HTTPONLY}}",(cks[i].httpOnly ? "checked" : " "));
 						template = template.replace("{{HOSTONLY}}",(cks[i].hostOnly ? "checked" : " "));
-						$("#cookies").append(template);
+						$("#cookies").append(template).accordion("refresh");
 					}
 				} else {
 					// No cookies
@@ -64,7 +65,7 @@ $(document).on('submit', '.cookie_form', function(e){ // Fired when a form is su
     
 
     // Scraping inputs by name
-    var cname = $("#"+cookieID+" h2[name=name]").text();
+    var cname = $("#"+cookieID+" input[name=namehidden]").val();
     var cdomain = $("#"+cookieID+" input[name=domain]").val();
     var cpath = $("#"+cookieID+" input[name=path]").val();
     var cvalue = $("#"+cookieID+" input[name=value]").val();

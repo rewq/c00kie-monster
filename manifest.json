@@ -1,9 +1,9 @@
 {
 
-  "description": "Adds browser action icon to toolbar to choose user agent string from popup menu. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples#user-agent-rewriter",
+  "description": "Adds a button to view and edit cookies.",
   "manifest_version": 2,
   "name": "C00kie Monster",
-  "version": "1.0",
+  "version": "1.01",
   "homepage_url": "https://github.com/dylanmm/c00kie-monster",
   "icons": {
     "48": "icons/cookie_icon.png"
@@ -11,8 +11,8 @@
 
   "applications": {
     "gecko": {
-      "id": "user-agent-rewriter@mozilla.org",
-      "strict_min_version": "45.0"
+      "id": "C00kieMonster-extension@example.com",
+      "strict_min_version": "46.0a1"
     }
   },
 

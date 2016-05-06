@@ -113,7 +113,3 @@ function onSet(cookie) {
     console.log(cookie);
   }
 }
-
- $(function() {
-    $( "#accordion" ).accordion();
-  });
